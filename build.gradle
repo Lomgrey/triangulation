@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'com.lomakin'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+}
+
+javafx {
+    version = "14.0.2"
+    modules = [ 'javafx.base', 'javafx.swing', 'javafx.graphics', 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.web' ]
+}
+
+mainClassName = 'org.lomakin.ui.App'

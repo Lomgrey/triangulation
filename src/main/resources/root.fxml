@@ -1,0 +1,21 @@
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.lomakin.ui.MainController"
+>
+    <HBox spacing="10">
+        <Button text="Clear points" onAction="#clearCanvas"/>
+        <Button text="Draw random points" onAction="#drawRandomPoints"/>
+        <TextField text="10"
+                   fx:id="pointsCount"
+                   prefWidth="50"/>
+        <Button text="Triangle it!" onAction="#triangle"/>
+    </HBox>
+    <Pane fx:id="canvas"
+          onMouseClicked="#drawPoint"
+    />
+</VBox>
